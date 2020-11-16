@@ -1,5 +1,4 @@
 
-
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -10,9 +9,9 @@ import classes.Panier;
 public class TestOr {
 
 	@Test
-	void testPanierIsEquals() throws Exception {
+	public void testPanierIsEquals() throws Exception {
 		Orange orange = new Orange(0.2, "France");
-		Orange orange2 = new Orange(0.2, "France");
+		Orange orange2 = new Orange(0.4, "France");
 		Panier panier = new Panier();
 		Panier panier2 = new Panier();
 		panier.ajoute(orange);
@@ -24,9 +23,9 @@ public class TestOr {
 	}
 
 	@Test
-	void testPanierIsNotEquals() throws Exception {
+	public void testPanierIsNotEquals() throws Exception {
 		Orange orange = new Orange(0.2, "France");
-		Orange orange2 = new Orange(0.2, "France");
+		Orange orange2 = new Orange(0.4, "France");
 		Panier panier = new Panier();
 		Panier panier2 = new Panier();
 		panier.ajoute(orange);
@@ -37,7 +36,7 @@ public class TestOr {
 	}
 
 	@Test
-	void testOrangeIsEquals() throws Exception {
+	public void testOrangeIsEquals() throws Exception {
 		Orange orange = new Orange(0.2, "France");
 		Orange orange2 = new Orange(0.2, "France");
 
@@ -45,9 +44,9 @@ public class TestOr {
 	}
 
 	@Test
-	void testOrangeIsNotEquals() throws Exception {
+	public void testOrangeIsNotEquals() throws Exception {
 		Orange orange = new Orange(0.2, "France");
-		Orange orange2 = new Orange(0.2, "France");
+		Orange orange2 = new Orange(0.4, "France");
 
 		assertEquals(false, orange.equals(orange2));
 	}
