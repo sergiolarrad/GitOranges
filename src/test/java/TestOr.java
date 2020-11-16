@@ -1,17 +1,18 @@
-package test;
 
-import static org.junit.Assert.assertEquals;
-import org.junit.jupiter.api.Test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
 
 import classes.Orange;
 import classes.Panier;
 
-class OrangeTest {
+public class TestOr {
 
 	@Test
 	void testPanierIsEquals() throws Exception {
 		Orange orange = new Orange(0.2, "France");
-		Orange orange2 = new Orange(0.5, "Espagne");
+		Orange orange2 = new Orange(0.2, "France");
 		Panier panier = new Panier();
 		Panier panier2 = new Panier();
 		panier.ajoute(orange);
@@ -25,7 +26,7 @@ class OrangeTest {
 	@Test
 	void testPanierIsNotEquals() throws Exception {
 		Orange orange = new Orange(0.2, "France");
-		Orange orange2 = new Orange(0.5, "Espagne");
+		Orange orange2 = new Orange(0.2, "France");
 		Panier panier = new Panier();
 		Panier panier2 = new Panier();
 		panier.ajoute(orange);
@@ -46,9 +47,8 @@ class OrangeTest {
 	@Test
 	void testOrangeIsNotEquals() throws Exception {
 		Orange orange = new Orange(0.2, "France");
-		Orange orange2 = new Orange(0.5, "Espagne");
+		Orange orange2 = new Orange(0.2, "France");
 
 		assertEquals(false, orange.equals(orange2));
 	}
-
 }
